@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+
+    <script defer src="src/js/script.js" type="module"></script>
+
+    <title>Stein-Schere-Papier</title>
+  </head>
+  <body>
+    <main class="game-container">
+      <header class="header">
+        <h1 class="heading-primary">Schere-Stein-Papier-Echse-Spock</h1>
+      </header>
+
+      <div class="game-content">
+        <!--? *-*-*-*-*-*-*-*-*-* SPIELER *-*-*-*-*-*-*-*-*-->
+        <div class="player">
+          <h2 class="heading-secondary">
+            Du - <span class="player__score">0</span>
+            <span class="player__choice"></span>
+          </h2>
+          <div class="player__icons">
+            <span class="player__icon" data-choice="schere" title="Schere">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-scissors" />
+              </svg>
+            </span>
+            <span class="player__icon" data-choice="stein" title="Stein">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-rock" />
+              </svg>
+            </span>
+            <span class="player__icon" data-choice="papier" title="Papier">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-paper" />
+              </svg>
+            </span>
+            <span class="player__icon" data-choice="echse" title="Echse">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-lizard" />
+              </svg>
+            </span>
+            <span class="player__icon" data-choice="spock" title="Spock">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-spock" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!--? *-*-*-*-*-*-*-*-*-* COMPUTER *-*-*-*-*-*-*-*-*-->
+        <div class="computer">
+          <h2 class="heading-secondary">
+            Computer - <span class="computer__score">0</span>
+            <span class="computer__choice"></span>
+          </h2>
+          <div class="computer__icons">
+            <span class="computer__icon" data-choise="schere" title="Schere">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-scissors" />
+              </svg>
+            </span>
+            <span class="computer__icon" data-choise="stein" title="Stein">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-rock" />
+              </svg>
+            </span>
+            <span class="computer__icon" data-choise="papier" title="Papier">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-paper" />
+              </svg>
+            </span>
+            <span class="computer__icon" data-choise="echse" title="Echse">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-lizard" />
+              </svg>
+            </span>
+            <span class="computer__icon" data-choise="spock" title="Spock">
+              <svg>
+                <use href="src/img/icons/sprite.svg#icon-spock" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <button class="btn-reset" title="Neustart">
+          <svg>
+            <use href="src/img/icons/sprite.svg#icon-reset" />
+          </svg>
+        </button>
+
+        <footer class="result">
+          <p class="result__text"></p>
+        </footer>
+      </div>
+    </main>
+
+    <!--?=== Damit "touch" Funktionalität auf Iphone/Mac funktioniert  ===-->
+    <script defer>
+      document.addEventListener("touchstart", function () {}, true);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+//**+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*/
+//**+*+*+*+*  Media-Query Manager *+*+*+*+*+*/
+//**+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*/
+/*
+$breakpoint Argument auswahl:
+- large   = 900px / 16px  => 65.25em
+- medium  = 610 / 16px    => 38.1em
+- small   = 460px / 16px  => 28.75em
+*/
+@mixin responsive($breakpoint) {
+  @if $breakpoint == large {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 38.1em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small {
+    @media only screen and (max-width: 28.75em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//****************************/
+//* HEADINGS */
+//****************************/
+.heading-primary {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+//****************************/
+//* BUTTONS */
+//****************************/
+.btn-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}

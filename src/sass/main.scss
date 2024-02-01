@@ -1,0 +1,87 @@
+@import "general";
+@import "queries";
+@import "typografie";
+
+//*?+*+*+*+====== !ANCHOR HEADER =====+*+*+*+*/
+.header {
+  background: $color-primary;
+  padding: 3.2rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player,
+.computer {
+  &__icons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: space-between;
+
+    svg {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__icon {
+    user-select: none;
+  }
+}
+
+.player {
+  &__choice {
+    color: $color-primary;
+  }
+
+  &__icons {
+    color: $color-primary;
+
+    svg {
+      fill: currentColor;
+      cursor: pointer;
+    }
+  }
+
+  &__icon.selected {
+    color: #000;
+  }
+}
+
+.computer {
+  &__choice {
+    color: $color-secondary;
+  }
+
+  &__icons {
+    color: $color-secondary;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &__icon.selected {
+    color: #000;
+  }
+}
+
+.result {
+  text-align: center;
+  margin-top: -1.6rem;
+  flex-basis: 5.2rem;
+
+  &__text {
+    font-size: 4.4rem;
+    font-weight: 600;
+  }
+}
+
+//! === Um Bug bei library  zu beheben ===
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+}
